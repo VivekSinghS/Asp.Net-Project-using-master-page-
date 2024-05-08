@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="NewMasterProject.Default" %>
+<%@ Register Src="~/HeaderPage.ascx" TagName="header1" TagPrefix="hdr1" %>
+<%@ Register Src="~/FooterPage.ascx" TagName="footer1" TagPrefix="ftr1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td> <hdr1:header1 ID="hed1" runat="server"></hdr1:header1>  </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="menu">
+		<ul class="menu">
+			<li><a href="StudentForm.aspx" class="parent"><span>Student</span></a>
+		
+			<li><a href="EmployeeForm.aspx"><span>Employee</span></a></li>
+			
+		</ul>
+	</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height:420px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                      </asp:ContentPlaceHolder></td>
+                </tr>
+                <tr>
+                <td> <ftr1:footer1 ID="fot1" runat="server"></ftr1:footer1>  </td>
+                    </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
